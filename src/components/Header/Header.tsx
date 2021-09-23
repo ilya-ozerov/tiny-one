@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logo from '../../assets/images/logo.svg';
 import './header.scss'
 
@@ -8,12 +8,6 @@ type HeaderProps = {
 }
 
 export const Header: React.FC<HeaderProps> = ({isBurger, toggleBurger}) => {
-
-    //const [isBurger, setIsBurger] = useState(false);
-
-    // const toggleBurger = (toggleValue: boolean) => {
-    //     setIsBurger(toggleValue);
-    // }
 
     return (
         <header className="header">
