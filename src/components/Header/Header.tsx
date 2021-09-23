@@ -2,13 +2,18 @@ import React, {useState} from 'react';
 import logo from '../../assets/images/logo.svg';
 import './header.scss'
 
-export const Header: React.FC = () => {
+type HeaderProps = {
+    isBurger: boolean;
+    toggleBurger: (toggleValue: boolean) => void;
+}
 
-    const [isBurger, setIsBurger] = useState(false);
+export const Header: React.FC<HeaderProps> = ({isBurger, toggleBurger}) => {
 
-    const toggleBurger = (toggleValue: boolean) => {
-        setIsBurger(toggleValue);
-    }
+    //const [isBurger, setIsBurger] = useState(false);
+
+    // const toggleBurger = (toggleValue: boolean) => {
+    //     setIsBurger(toggleValue);
+    // }
 
     return (
         <header className="header">
