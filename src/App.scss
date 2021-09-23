@@ -1,0 +1,31 @@
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 150%;
+}
+.subtitle {
+  font-size: 20px;
+  line-height: 150%;
+  color: #313841;
+}
+.text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #555555;
+}
