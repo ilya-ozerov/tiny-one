@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../../assets/images/logo.svg';
 import './header.scss'
 
-type HeaderProps = {
-    isBurger: boolean;
-    toggleBurger: (toggleValue: boolean) => void;
-}
+export const Header: React.FC = () => {
 
-export const Header: React.FC<HeaderProps> = ({isBurger, toggleBurger}) => {
+    const [isBurger, setIsBurger] = useState(false);
+
+    const toggleBurger = (toggleValue: boolean) => {
+        setIsBurger(toggleValue);
+        if (document.body.style.overflow !== "hidden") {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "scroll";
+        }
+    }
 
     return (
         <header className="header">
