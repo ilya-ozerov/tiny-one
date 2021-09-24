@@ -88,6 +88,10 @@
       border-radius: 5px;
       color: #010101;
 
+      @media (max-width: 767px) {
+        width: 150px;
+      }
+
       &:hover {
         background-color: rgba(#fcdb00, 0.8);
       }
@@ -110,6 +114,7 @@
     &:hover {
       color: rgba(#fcdb00, 0.8);
     }
+
     &:active {
       color: #e8d636;
     }
@@ -119,6 +124,7 @@
     &:hover {
       color: rgba(#fcdb00, 0.8);
     }
+
     &:active {
       color: #e8d636;
     }
@@ -128,6 +134,7 @@
     &:hover {
       color: rgba(#fcdb00, 0.8);
     }
+
     &:active {
       color: #e8d636;
     }
