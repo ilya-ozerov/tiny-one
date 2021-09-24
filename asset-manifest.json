@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/tiny-one/static/css/main.e6c938b1.chunk.css",
-    "main.js": "/tiny-one/static/js/main.02ce6a50.chunk.js",
-    "main.js.map": "/tiny-one/static/js/main.02ce6a50.chunk.js.map",
+    "main.css": "/tiny-one/static/css/main.f2bd3e54.chunk.css",
+    "main.js": "/tiny-one/static/js/main.d2b4be07.chunk.js",
+    "main.js.map": "/tiny-one/static/js/main.d2b4be07.chunk.js.map",
     "runtime-main.js": "/tiny-one/static/js/runtime-main.f635c059.js",
     "runtime-main.js.map": "/tiny-one/static/js/runtime-main.f635c059.js.map",
-    "static/js/2.68fca159.chunk.js": "/tiny-one/static/js/2.68fca159.chunk.js",
-    "static/js/2.68fca159.chunk.js.map": "/tiny-one/static/js/2.68fca159.chunk.js.map",
+    "static/js/2.9afc7efc.chunk.js": "/tiny-one/static/js/2.9afc7efc.chunk.js",
+    "static/js/2.9afc7efc.chunk.js.map": "/tiny-one/static/js/2.9afc7efc.chunk.js.map",
     "static/js/3.ab131547.chunk.js": "/tiny-one/static/js/3.ab131547.chunk.js",
     "static/js/3.ab131547.chunk.js.map": "/tiny-one/static/js/3.ab131547.chunk.js.map",
     "index.html": "/tiny-one/index.html",
-    "static/css/main.e6c938b1.chunk.css.map": "/tiny-one/static/css/main.e6c938b1.chunk.css.map",
-    "static/js/2.68fca159.chunk.js.LICENSE.txt": "/tiny-one/static/js/2.68fca159.chunk.js.LICENSE.txt",
+    "static/css/main.f2bd3e54.chunk.css.map": "/tiny-one/static/css/main.f2bd3e54.chunk.css.map",
+    "static/js/2.9afc7efc.chunk.js.LICENSE.txt": "/tiny-one/static/js/2.9afc7efc.chunk.js.LICENSE.txt",
     "static/media/logo.0687473e.svg": "/tiny-one/static/media/logo.0687473e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f635c059.js",
-    "static/js/2.68fca159.chunk.js",
-    "static/css/main.e6c938b1.chunk.css",
-    "static/js/main.02ce6a50.chunk.js"
+    "static/js/2.9afc7efc.chunk.js",
+    "static/css/main.f2bd3e54.chunk.css",
+    "static/js/main.d2b4be07.chunk.js"
   ]
 }
