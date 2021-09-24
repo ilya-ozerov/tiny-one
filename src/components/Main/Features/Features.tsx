@@ -15,9 +15,9 @@ type FeaturesProps = {
 
 export const Features: React.FC<FeaturesProps> = ({featuresRef}) => {
     return (
-        <section  className="features">
+        <section ref={featuresRef} className="features">
             <div className="container">
-                <div ref={featuresRef} className="features__row">
+                <div className="features__row">
                     <div className="features__title title">Features header</div>
                     <div className="features__subtitle subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
