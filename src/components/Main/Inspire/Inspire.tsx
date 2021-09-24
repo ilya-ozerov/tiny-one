@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './inspire.scss';
 import iPadMini from '../../../assets/images/iPad Mini White facing.png';
 import {AndroidFilled, AppleFilled, WindowsFilled} from "@ant-design/icons";
+import {InspirePage} from "./InspirePage";
 
 type InspireProps = {}
 
@@ -14,98 +15,75 @@ enum Pages {
 export const Inspire: React.FC<InspireProps> = () => {
 
     const [page, setPage] = useState<Pages>(Pages.first);
+    const inspireRef = useRef<HTMLDivElement>(null)
+
+    const togglePage = (number: Pages) => {
+        setPage(number);
+
+        if (window.innerWidth < 767) {
+            inspireRef.current?.scrollIntoView({behavior: "smooth"});
+        }
+    }
+
+    useEffect(() => {
+        const autoChangePage = setInterval(() => {
+            setPage(current => {
+                switch (current) {
+                    case Pages.first:
+                        return Pages.second;
+                    case Pages.second:
+                        return Pages.third;
+                    case Pages.third:
+                        return Pages.first;
+                }
+            });
+        }, 10000);
+
+        return () => {
+            clearInterval(autoChangePage);
+        }
+    })
 
     return (
-        <section className="inspire">
+        <section ref={inspireRef} className="inspire">
             <div className="container">
-
-                {
-                    page === Pages.first &&
-                    <div className="inspire__row">
-                        <div className="inspire__body">
-                            <div className="inspire__title title">Inspire your inspiration 1</div>
-                            <div className="inspire__subtitle subtitle">Simple to use for your app, products
-                                showcase and your inspirat
-                            </div>
-                            <div className="inspire__text text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                <div className="inspire__row">
+                    {
+                        page === Pages.first &&
+                        <InspirePage title='Inspire your inspiration' subtitle='Simple to use for your app, products
+                                showcase and your inspirat' text='Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
                                 venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
-                                lobortis sit
-                            </div>
-                            <div className="inspire__icons">
-                                <AppleFilled className="inspire__apple-icon"/>
-                                <AndroidFilled className="inspire__android-icon"/>
-                                <WindowsFilled className="inspire__windows-icon"/>
-                            </div>
-                        </div>
-                        <div className="inspire__image">
-                            <img src={iPadMini} alt="ipad mini with logo"/>
-                        </div>
-                    </div>
-                }
+                                lobortis sit' icons={[<AppleFilled/>, <AndroidFilled/>, <WindowsFilled/>]} img={iPadMini} imgAlt='ipad mini with logo'/>
+                    }
 
-                {
-                    page === Pages.second &&
-                    <div className="inspire__row">
-                        <div className="inspire__body">
-                            <div className="inspire__title title">Inspire your inspiration 2</div>
-                            <div className="inspire__subtitle subtitle">Simple to use for your app, products
-                                showcase and your inspirat
-                            </div>
-                            <div className="inspire__text text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
-                                venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
-                                lobortis sit
-                            </div>
-                            <div className="inspire__icons">
-                                <AppleFilled className="inspire__apple-icon"/>
-                                <AndroidFilled className="inspire__android-icon"/>
-                                <WindowsFilled className="inspire__windows-icon"/>
-                            </div>
-                        </div>
-                        <div className="inspire__image">
-                            <img src={iPadMini} alt="ipad mini with logo"/>
-                        </div>
-                    </div>
-                }
-
-                {
-                    page === Pages.third &&
-                    <div className="inspire__row">
-                        <div className="inspire__body">
-                            <div className="inspire__title title">Inspire your inspiration 3</div>
-                            <div className="inspire__subtitle subtitle">Simple to use for your app, products
-                                showcase and your inspirat
-                            </div>
-                            <div className="inspire__text text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
-                                venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
-                                lobortis sit
-                            </div>
-                            <div className="inspire__icons">
-                                <AppleFilled className="inspire__apple-icon"/>
-                                <AndroidFilled className="inspire__android-icon"/>
-                                <WindowsFilled className="inspire__windows-icon"/>
-                            </div>
-                        </div>
-                        <div className="inspire__image">
-                            <img src={iPadMini} alt="ipad mini with logo"/>
-                        </div>
-                    </div>
-                }
+                    {
+                        page === Pages.second &&
+                        <InspirePage title='Lorem ipsum dolor. ' subtitle='Lorem ipsum dolor sit amet.' text='Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
+                                    venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
+                                    lobortis sit' icons={[<AppleFilled/>, <AppleFilled/>, <AppleFilled/>]} img={iPadMini} imgAlt='ipad mini with logo'/>
+                    }
+                    {
+                        page === Pages.third &&
+                        <InspirePage title='Lorem ipsum dolor sit amet.'
+                                     subtitle='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, voluptas.'
+                                     text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium amet assumenda commodi consequuntur culpa cumque cupiditate, deserunt dolor dolorum ducimus eius eligendi facere facilis illo incidunt ipsum maiores natus nemo non obcaecati perferendis possimus provident similique, soluta ut voluptatum. Ab consequuntur delectus earum eius eum harum incidunt laboriosam soluta.'
+                                     icons={[<WindowsFilled/>, <WindowsFilled/>, <WindowsFilled/>]} img={iPadMini} imgAlt='ipad mini with logo'/>
+                    }
+                </div>
 
                 <div className="inspire__row">
                     <div className="inspire__dots">
                         {/* 1 */}
-                        <div onClick={() => setPage(Pages.first)}
+                        <div onClick={() => togglePage(Pages.first)}
                              className={page !== Pages.first ? "inspire__dot" : "inspire__dot inspire__dot-active"}></div>
                         {/* 2 */}
-                        <div onClick={() => setPage(Pages.second)}
+                        <div onClick={() => togglePage(Pages.second)}
                              className={page !== Pages.second ? "inspire__dot" : "inspire__dot inspire__dot-active"}></div>
                         {/* 3 */}
-                        <div onClick={() => setPage(Pages.third)}
+                        <div onClick={() => togglePage(Pages.third)}
                              className={page !== Pages.third ? "inspire__dot" : "inspire__dot inspire__dot-active"}></div>
-
                     </div>
                 </div>
             </div>
