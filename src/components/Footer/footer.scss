@@ -5,6 +5,11 @@
     line-height: 150%;
     padding: 70px 0px;
 
+
+    @media (max-width: 767px) {
+        font-size: 21px;
+    }
+
     &__row {
         display: flex;
 
@@ -50,7 +55,6 @@
 
         @media (max-width: 767px) {
             flex-direction: column;
-
         }
     }
     &__column {
@@ -61,8 +65,10 @@
         }
 
         @media (max-width: 767px) {
+            //font-size: 20px;
+            line-height: 150%;
             text-align: center;
-            margin: 0px 0px 10px 0px;
+            margin: 0px 0px 20px 0px;
         }
     }
 }
