@@ -2,7 +2,7 @@
   "name": "tiny-one",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://ilya-ozerov.github.io/tiny-one",
+  "homepage": "https://ilya-ozerov.github.io/tiny-one/",
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
     "@testing-library/jest-dom": "^5.11.4",

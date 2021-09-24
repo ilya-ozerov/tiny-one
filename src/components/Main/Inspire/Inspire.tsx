@@ -3,7 +3,10 @@ import './inspire.scss';
 import iPadMini from '../../../assets/images/iPad Mini White facing.png';
 import {AndroidFilled, AppleFilled, WindowsFilled} from "@ant-design/icons";
 
-export const Inspire: React.FC = () => {
+type InspireProps = {
+}
+
+export const Inspire: React.FC<InspireProps> = () => {
     return (
         <section className="inspire">
             <div className="container">

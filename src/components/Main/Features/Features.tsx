@@ -9,11 +9,15 @@ import {
 import React from 'react';
 import './features.scss'
 
-export const Features: React.FC = () => {
+type FeaturesProps = {
+    featuresRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Features: React.FC<FeaturesProps> = ({featuresRef}) => {
     return (
-        <section className="features">
+        <section  className="features">
             <div className="container">
-                <div className="features__row">
+                <div ref={featuresRef} className="features__row">
                     <div className="features__title title">Features header</div>
                     <div className="features__subtitle subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis

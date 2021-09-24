@@ -2,7 +2,13 @@ import React, {useState} from 'react';
 import logo from '../../assets/images/logo.svg';
 import './header.scss'
 
-export const Header: React.FC = () => {
+type HeaderProps = {
+    featuresRef: React.RefObject<HTMLDivElement>;
+    supportRef: React.RefObject<HTMLDivElement>;
+    blogRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Header: React.FC<HeaderProps> = ({featuresRef, supportRef, blogRef}) => {
 
     const [isBurger, setIsBurger] = useState(false);
 
@@ -13,6 +19,30 @@ export const Header: React.FC = () => {
         } else {
             document.body.style.overflow = "scroll";
         }
+    }
+
+    const scrollToFeatures = () => {
+        if (isBurger) {
+            setIsBurger(false);
+            document.body.style.overflow = "scroll";
+        }
+        featuresRef.current?.scrollIntoView({behavior: "smooth"});
+    }
+
+    const scrollToSupport = () => {
+        if (isBurger) {
+            setIsBurger(false);
+            document.body.style.overflow = "scroll";
+        }
+        supportRef.current?.scrollIntoView({behavior: "smooth"});
+    }
+
+    const scrollToBlog = () => {
+        if (isBurger) {
+            setIsBurger(false);
+            document.body.style.overflow = "scroll";
+        }
+        blogRef.current?.scrollIntoView({behavior: "smooth"});
     }
 
     return (
@@ -29,9 +59,9 @@ export const Header: React.FC = () => {
 
                     <aside className="header__menu">
 
-                        <a className="header__link" href='#'>Features</a>
-                        <a className="header__link" href='#'>Support</a>
-                        <a className="header__link" href='#'>Blog</a>
+                        <button onClick={scrollToFeatures} className="header__link">Features</button>
+                        <button onClick={scrollToSupport} className="header__link">Support</button>
+                        <button onClick={scrollToBlog} className="header__link">Blog</button>
 
                     </aside>
 
@@ -49,9 +79,9 @@ export const Header: React.FC = () => {
                     {
                         isBurger &&
                         <div className="header__mobile-menu">
-                            <a className="header__link" href='#'>Features</a>
-                            <a className="header__link" href='#'>Support</a>
-                            <a className="header__link" href='#'>Blog</a>
+                            <button onClick={scrollToFeatures} className="header__link">Features</button>
+                            <button onClick={scrollToSupport} className="header__link">Support</button>
+                            <button onClick={scrollToBlog} className="header__link">Blog</button>
                         </div>
                     }
                 </div>

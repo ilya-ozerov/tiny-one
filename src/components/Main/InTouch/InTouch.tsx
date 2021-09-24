@@ -2,12 +2,17 @@ import {FacebookFilled, GooglePlusSquareFilled, TwitterSquareFilled} from '@ant-
 import React from 'react';
 import './intouch.scss';
 
-export const InTouch: React.FC = () => {
+type InTouchProps = {
+    supportRef: React.RefObject<HTMLDivElement>;
+    blogRef: React.RefObject<HTMLDivElement>;
+}
+
+export const InTouch: React.FC<InTouchProps> = ({supportRef, blogRef}) => {
     return (
         <section className="in-touch">
             <div className="container">
                 <div className="in-touch__row">
-                    <div className="in-touch__title title">Keep in touch with us</div>
+                    <div ref={supportRef} className="in-touch__title title">Keep in touch with us</div>
                     <div className="in-touch__subtitle subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
                         venenatis.
@@ -20,7 +25,7 @@ export const InTouch: React.FC = () => {
                             <button>Submit</button>
                         </div>
                     </div>
-                    <div className="in-touch__socials">
+                    <div ref={blogRef} className="in-touch__socials">
                         <FacebookFilled className="in-touch__facebook"/>
                         <TwitterSquareFilled className="in-touch__twitter"/>
                         <GooglePlusSquareFilled className="in-touch__google"/>
