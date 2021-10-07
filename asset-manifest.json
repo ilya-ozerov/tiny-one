@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/tiny-one/static/css/main.28434a73.chunk.css",
-    "main.js": "/tiny-one/static/js/main.d2b4be07.chunk.js",
-    "main.js.map": "/tiny-one/static/js/main.d2b4be07.chunk.js.map",
-    "runtime-main.js": "/tiny-one/static/js/runtime-main.f635c059.js",
-    "runtime-main.js.map": "/tiny-one/static/js/runtime-main.f635c059.js.map",
-    "static/js/2.9afc7efc.chunk.js": "/tiny-one/static/js/2.9afc7efc.chunk.js",
-    "static/js/2.9afc7efc.chunk.js.map": "/tiny-one/static/js/2.9afc7efc.chunk.js.map",
-    "static/js/3.ab131547.chunk.js": "/tiny-one/static/js/3.ab131547.chunk.js",
-    "static/js/3.ab131547.chunk.js.map": "/tiny-one/static/js/3.ab131547.chunk.js.map",
+    "main.css": "/tiny-one/static/css/main.495e9144.chunk.css",
+    "main.js": "/tiny-one/static/js/main.56800ac1.chunk.js",
+    "main.js.map": "/tiny-one/static/js/main.56800ac1.chunk.js.map",
+    "runtime-main.js": "/tiny-one/static/js/runtime-main.4685d0ce.js",
+    "runtime-main.js.map": "/tiny-one/static/js/runtime-main.4685d0ce.js.map",
+    "static/css/2.89e96589.chunk.css": "/tiny-one/static/css/2.89e96589.chunk.css",
+    "static/js/2.97b85899.chunk.js": "/tiny-one/static/js/2.97b85899.chunk.js",
+    "static/js/2.97b85899.chunk.js.map": "/tiny-one/static/js/2.97b85899.chunk.js.map",
+    "static/js/3.950651df.chunk.js": "/tiny-one/static/js/3.950651df.chunk.js",
+    "static/js/3.950651df.chunk.js.map": "/tiny-one/static/js/3.950651df.chunk.js.map",
     "index.html": "/tiny-one/index.html",
-    "static/css/main.28434a73.chunk.css.map": "/tiny-one/static/css/main.28434a73.chunk.css.map",
-    "static/js/2.9afc7efc.chunk.js.LICENSE.txt": "/tiny-one/static/js/2.9afc7efc.chunk.js.LICENSE.txt",
+    "static/css/2.89e96589.chunk.css.map": "/tiny-one/static/css/2.89e96589.chunk.css.map",
+    "static/css/main.495e9144.chunk.css.map": "/tiny-one/static/css/main.495e9144.chunk.css.map",
+    "static/js/2.97b85899.chunk.js.LICENSE.txt": "/tiny-one/static/js/2.97b85899.chunk.js.LICENSE.txt",
     "static/media/logo.0687473e.svg": "/tiny-one/static/media/logo.0687473e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f635c059.js",
-    "static/js/2.9afc7efc.chunk.js",
-    "static/css/main.28434a73.chunk.css",
-    "static/js/main.d2b4be07.chunk.js"
+    "static/js/runtime-main.4685d0ce.js",
+    "static/css/2.89e96589.chunk.css",
+    "static/js/2.97b85899.chunk.js",
+    "static/css/main.495e9144.chunk.css",
+    "static/js/main.56800ac1.chunk.js"
   ]
 }
